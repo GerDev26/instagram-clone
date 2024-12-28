@@ -1,0 +1,55 @@
+:root {
+  --mobile-scale: 1.125;
+  --mobile-base-size: 16px;
+
+  --desktop-scale: 1.125;
+  --desktop-base-size: 18px;
+
+  /* Desktop font sizes */
+  --desktop-font-size-small: calc(var(--desktop-base-size) / var(--desktop-scale));
+  --desktop-font-size-p: var(--desktop-base-size);
+  --desktop-font-size-h6: calc(var(--desktop-base-size) * var(--desktop-scale));
+  --desktop-font-size-h5: calc(var(--desktop-font-size-h6) * var(--desktop-scale));
+  --desktop-font-size-h4: calc(var(--desktop-font-size-h5) * var(--desktop-scale));
+  --desktop-font-size-h3: calc(var(--desktop-font-size-h4) * var(--desktop-scale));
+  --desktop-font-size-h2: calc(var(--desktop-font-size-h3) * var(--desktop-scale));
+  --desktop-font-size-h1: calc(var(--desktop-font-size-h2) * var(--desktop-scale));
+
+  /* Mobile font sizes */
+  --mobile-font-size-small: calc(var(--mobile-base-size) / var(--mobile-scale));
+  --mobile-font-size-p: var(--mobile-base-size);
+  --mobile-font-size-h6: calc(var(--mobile-base-size) * var(--mobile-scale));
+  --mobile-font-size-h5: calc(var(--mobile-font-size-h6) * var(--mobile-scale));
+  --mobile-font-size-h4: calc(var(--mobile-font-size-h5) * var(--mobile-scale));
+  --mobile-font-size-h3: calc(var(--mobile-font-size-h4) * var(--mobile-scale));
+  --mobile-font-size-h2: calc(var(--mobile-font-size-h3) * var(--mobile-scale));
+  --mobile-font-size-h1: calc(var(--mobile-font-size-h2) * var(--mobile-scale));
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* Desktop font sizes */
+    --font-size-h1: var(--desktop-font-size-h1);
+    --font-size-h2: var(--desktop-font-size-h2);
+    --font-size-h3: var(--desktop-font-size-h3);
+    --font-size-h4: var(--desktop-font-size-h4);
+    --font-size-h5: var(--desktop-font-size-h5);
+    --font-size-h6: var(--desktop-font-size-h6);
+    --font-size-p: var(--desktop-font-size-p);
+    --font-size-small: var(--desktop-font-size-small);
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    /* Mobile font sizes */
+    --font-size-h1: var(--mobile-font-size-h1);
+    --font-size-h2: var(--mobile-font-size-h2);
+    --font-size-h3: var(--mobile-font-size-h3);
+    --font-size-h4: var(--mobile-font-size-h4);
+    --font-size-h5: var(--mobile-font-size-h5);
+    --font-size-h6: var(--mobile-font-size-h6);
+    --font-size-p: var(--mobile-font-size-p);
+    --font-size-small: var(--mobile-font-size-small);
+  }
+}
