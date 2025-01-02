@@ -2,11 +2,15 @@
 body, #root {
   width: 100%;
   height: 100vh;
-  background-color: var(--background-color);
-  color: var(--default-text-color);
+  background-color: var(--neutral-50);
+  color: var(--neutral-950);
 }
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+:root{
+  --background-color: var(--neutral-50);
+  --default-text-color: var(--neutral-950)
 }

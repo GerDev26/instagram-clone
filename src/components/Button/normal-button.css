@@ -1,0 +1,46 @@
+.normal-btn {
+  color: var(--normal-btn-text-color);
+  background-color: var(--normal-btn-bg-color);
+  &&:hover{
+    background-color: var(--normal-btn-bg-hover);
+
+  }
+  &&:active{
+    background-color: var(--normal-btn-bg-active);
+  }
+}
+
+.normal-btn--primary {
+  --normal-btn-text-color: var(--neutral-50);
+  --normal-btn-bg-color: var(--primary-500);
+  --normal-btn-bg-hover: var(--primary-600);
+  --normal-btn-bg-active: var(--primary-700);
+}
+
+.normal-btn--neutral {
+  --normal-btn-text-color: var(--neutral-light);
+  --normal-btn-bg-color: var(--neutral-dark);
+  --normal-btn-bg-hover: var(--neutral-800);
+  --normal-btn-bg-active: var(--neutral-700);
+}
+
+.normal-btn--success {
+  --normal-btn-text-color: var(--neutral-50);
+  --normal-btn-bg-color: var(--success-500);
+  --normal-btn-bg-hover: var(--success-600);
+  --normal-btn-bg-active: var(--success-700);
+}
+
+.normal-btn--warning {
+  --normal-btn-text-color: var(--neutral-50);
+  --normal-btn-bg-color: var(--warning-500);
+  --normal-btn-bg-hover: var(--warning-600);
+  --normal-btn-bg-active: var(--warning-700);
+}
+
+.normal-btn--danger {
+  --normal-btn-text-color: var(--neutral-50);
+  --normal-btn-bg-color: var(--danger-500);
+  --normal-btn-bg-hover: var(--danger-600);
+  --normal-btn-bg-active: var(--danger-700);
+}

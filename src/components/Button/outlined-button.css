@@ -1,0 +1,70 @@
+.outlined-btn {
+    color: var(--outlined-btn-text-color);
+    background-color: transparent;
+    outline: 2px solid var(--outlined-btn-outline-color);
+    position: relative;
+    &&:hover {
+      &&::after{
+        width: 102%; 
+      }
+    }
+    &&:active {
+      &&::after{
+        outline-color: var(--outlined-btn-outline-color-hover);
+        background-color: var(--outlined-btn-bg-active);
+      }
+    }
+    &&::after {
+      content: '';
+      background-color: var(--outlined-btn-bg-hover);
+      width: 0%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      border-radius: var(--border-radius-1);
+      transition: all 200ms ease-in-out;
+    }
+  }
+  
+  .outlined-btn--primary {
+    --outlined-btn-text-color: var(--primary-500);
+    --outlined-btn-outline-color: var(--primary-500);
+    --outlined-btn-outline-color-hover: var(--primary-400);
+    --outlined-btn-bg-hover: var(--primary-100);
+    --outlined-btn-bg-active: var(--primary-200);
+  }
+  
+  .outlined-btn--neutral {
+    --outlined-btn-text-color: var(--neutral-dark);
+    --outlined-btn-outline-color: var(--neutral-dark);
+    --outlined-btn-outline-color-hover: var(--neutral-800);
+    --outlined-btn-bg-hover: var(--neutral-100);
+    --outlined-btn-bg-active: var(--neutral-200);
+  }
+  
+  .outlined-btn--success {
+    --outlined-btn-text-color: var(--success-500);
+    --outlined-btn-outline-color: var(--success-500);
+    --outlined-btn-outline-color-hover: var(--success-400);
+    --outlined-btn-bg-hover: var(--success-100);
+    --outlined-btn-bg-active: var(--success-200);
+  }
+  
+  .outlined-btn--warning {
+    --outlined-btn-text-color: var(--warning-500);
+    --outlined-btn-outline-color: var(--warning-500);
+    --outlined-btn-outline-color-hover: var(--warning-400);
+    --outlined-btn-bg-hover: var(--warning-100);
+    --outlined-btn-bg-active: var(--warning-200);
+  }
+  
+  .outlined-btn--danger {
+    --outlined-btn-text-color: var(--danger-500);
+    --outlined-btn-outline-color: var(--danger-500);
+    --outlined-btn-outline-color-hover: var(--danger-400);
+    --outlined-btn-bg-hover: var(--danger-100);
+    --outlined-btn-bg-active: var(--danger-200);
+  }
+  
