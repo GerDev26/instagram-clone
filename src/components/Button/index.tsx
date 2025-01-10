@@ -1,36 +1,50 @@
 import { ReactNode } from 'react';
 import './styles.css';
 
+export type ButtonColorTypes = 'primary' | 'neutral' | 'success' | 'warning' | 'danger'
+export type ButtonVariantType = 'normal' | 'outlined' | 'text'
+
+const validVariants: ButtonVariantType[] = ['normal', 'outlined', 'text']
+const validColors: ButtonColorTypes[] = ['primary', 'neutral', 'success', 'warning', 'danger']
+
 interface ButtonProps {
-  children?: string;
-  type?: 'normal' | 'outlined' | 'text';
-  color?: 'primary' | 'neutral' | 'success' | 'warning' | 'danger'
+  children?: string
+  variant?: ButtonVariantType
+  color?: ButtonColorTypes
   startIcon?: ReactNode
   endIcon?: ReactNode
   disabled?: boolean
   loading?: boolean
 }
 
+export function Button({ children = '', variant = 'normal', color = 'primary', startIcon, endIcon, disabled = false}: ButtonProps) {
 
-export function Button({ children = '', type = 'normal', color = 'primary', startIcon, endIcon, disabled = false, loading = false }: ButtonProps) {
-  let buttonStyle = `button ${type}-btn ${type}-btn--${color}`
-  const iconStyle = {width: '24px', height: '24px', zIndex: '1'}
+  const variantStyle = validVariants.includes(variant)
+  ? `${variant}-btn`
+  : `normal-btn`
   
+  const colorStyle = validColors.includes(color)
+  ? `${variantStyle}--${color}`
+  : `${variantStyle}--primary`
 
-  if(endIcon) {
-    buttonStyle += ' right-icon'
-    return (
-      <button disabled={disabled} className={buttonStyle}><small>{children}</small><div style={iconStyle}>{endIcon}</div></button>
-    )
-  }
-  if(startIcon) {
-    buttonStyle += ' left-icon'
-    return (
-        <button disabled={disabled} className={buttonStyle}><small>{children}</small><div style={iconStyle}>{startIcon}</div></button>
-    )
+  const buttonStyle = `button ${variantStyle} ${colorStyle}`
+  
+  const renderIcon = (icon: ReactNode) => {
+    const iconStyle = {width: '24px', height: '24px', zIndex: '1'}
+    return <div style={iconStyle}>{icon}</div>
   }
 
-  return <button disabled={disabled} className={buttonStyle}><small>{children}</small></button>;
+  return (
+    <button 
+      disabled={disabled} 
+      className={buttonStyle}>
+      {startIcon ? renderIcon(startIcon) : ''}
+      <small>
+        {children}
+      </small>
+      {endIcon ? renderIcon(endIcon) : ''}
+    </button>
+  )
 }
 
 export function Icon(){
