@@ -1,9 +1,9 @@
 :root {
-  --mobile-scale: 1.125;
-  --mobile-base-size: 16px;
+  --mobile-scale: 1.067;
+  --mobile-base-size: 14px;
 
-  --desktop-scale: 1.125;
-  --desktop-base-size: 18px;
+  --desktop-scale: 1.067;
+  --desktop-base-size: 14px;
 
   /* Desktop font sizes */
   --desktop-font-size-small: calc(var(--desktop-base-size) / var(--desktop-scale));
