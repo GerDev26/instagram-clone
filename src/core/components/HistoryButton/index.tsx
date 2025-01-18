@@ -1,17 +1,17 @@
 import './styles.css'
 
-interface HistoryCardProps {
+interface HistoryButtonProps {
   img: string
   alt?: string
   size?: number
   username?: string
 }
 
-export function HistoryCard({ img, alt, username, size }: HistoryCardProps) {
+export function HistoryButton({ img, alt, username, size }: HistoryButtonProps) {
   const cardStyle = {width: size, height: size}
   const fontStyle = {fontSize: `${size/3.5}px`}
   return (
-    <button className='history-card'>
+    <button className='history-button'>
       <div style={cardStyle || ''}>
         <img src={img} alt={alt || 'Image'} />
       </div>

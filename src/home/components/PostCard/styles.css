@@ -26,6 +26,10 @@
         p:first-child {
           font-weight: bold;
         }
+
+        p:nth-child(3) {
+          color: rgba(255, 255, 255, 0.500);
+        }
       }
     }
   }
@@ -45,10 +49,10 @@
   > div {
     padding-block: var(--spacing-1);
     display: grid;
-    grid-template-columns: repeat(14, 1fr);
+    grid-template-columns: repeat(12, 1fr);
 
     svg:last-child {
-      grid-column-start: 14;
+      grid-column-start: 12;
     }
   }
 

@@ -4,7 +4,7 @@
   gap: var(--spacing-3);
   margin: auto;
   flex-shrink: 0;
-  width: calc((64px + var(--spacing-3)) * 8);
+  width: calc((80px + var(--spacing-3)) * 8);
   margin-bottom: 16px;
 
   &::-webkit-scrollbar {
