@@ -1,7 +1,7 @@
 import { BookmarkIcon, ChatBubbleOvalLeftIcon, EllipsisHorizontalIcon, FaceSmileIcon, HeartIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline'
 import { CheckBadgeIcon } from '@heroicons/react/24/solid'
-import { HistoryCard } from '../../../core/components/HistoryButton'
 import './styles.css'
+import { HistoryButton } from '../../../core/components/HistoryButton'
 
 function timeDifference(date: string | Date): string {
   const targetDate = typeof date === 'string' ? new Date(date) : date
@@ -42,7 +42,7 @@ export function PostCard({ username, userProfilePhoto, audio, date, verified, me
   return (
     <article className='post'>
       <header>
-        <HistoryCard size={38} img={userProfilePhoto}/>
+        <HistoryButton size={38} img={userProfilePhoto}/>
         <div>
           <span>
             <p>{username}</p>

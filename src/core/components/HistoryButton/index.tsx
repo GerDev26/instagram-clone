@@ -8,14 +8,20 @@ interface HistoryButtonProps {
 }
 
 export function HistoryButton({ img, alt, username, size }: HistoryButtonProps) {
-  const cardStyle = {width: size, height: size}
-  const fontStyle = {fontSize: `${size/3.5}px`}
+
+  const cardStyle = size ? {width: size, height: size} : {}
+  const fontStyle = size ? {fontSize: `${size/3.5}px`} : {}
+
   return (
     <button className='history-button'>
-      <div style={cardStyle || ''}>
+      <div style={cardStyle}>
         <img src={img} alt={alt || 'Image'} />
       </div>
-      {username ? <small style={fontStyle || ''}>{username}</small> : ''}
+      {
+        username 
+          ? <small style={fontStyle}>{username}</small>
+          : null
+      }
     </button>
   )
 }
